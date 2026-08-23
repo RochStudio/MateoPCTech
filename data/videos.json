@@ -1,0 +1,170 @@
+{
+  "mateopctech": [
+    {
+      "id": "sUQT340JaPU",
+      "title": "How to Overclock your intel CPU on a ASUS motherboard (14900KS, Z790 Apex, Bios Settings)"
+    },
+    {
+      "id": "Rk30ef162tY",
+      "title": "How to update ASUS Bios (Z790, Z690)"
+    },
+    {
+      "id": "7gl2RHedXJE",
+      "title": "How to Overclock your Intel CPU on z790/z690 (14900k, MSI)"
+    },
+    {
+      "id": "PUqILitzF68",
+      "title": "How to Overclock DDR4 on z790/z690 (MSI bios, Samsung b-die, 14900k, Full Guide)"
+    },
+    {
+      "id": "_N7rpsEE8i0",
+      "title": "How to setup your CPU and RAM on MSI Z790/Z690 (14900k, Bios Settings, xmp, Cores)"
+    },
+    {
+      "id": "CmHM7UO7ND0",
+      "title": "Best Budget DDR5 for Gaming 2026 | Overclocked to 8800MHz (oem hynix, green pcb)"
+    },
+    {
+      "id": "QslS_nHJFwg",
+      "title": "SMT on or off 9850x3d"
+    },
+    {
+      "id": "AcMS4r7ZbbU",
+      "title": "270k vs 14900KS MAX OC Benchmarks"
+    },
+    {
+      "id": "otFHvD-ZzPk",
+      "title": "270k Plus Stock VS MAX OC"
+    },
+    {
+      "id": "SA0cyyy7nOU",
+      "title": "Hyper Threading and Ecores on or off?"
+    },
+    {
+      "id": "ArKzF_n7gRY",
+      "title": "285K 8600CL36 Rainbow Six Siege Benchmark | 1920x1080 Low | 5070 ti"
+    },
+    {
+      "id": "ihOyJdhY97U",
+      "title": "285K 8600CL36 Marvel Rivals Benchmark | 1920x1080 Low | 5070 ti"
+    },
+    {
+      "id": "d99r_I0-7lY",
+      "title": "285K 8600CL36 CS2 BENCHMARK | 1920x1080 low | 5070 ti"
+    },
+    {
+      "id": "jNs4Noj9Wrw",
+      "title": "9850x3d 32gb vs 64gb (Single Rank vs Dual Rank, A-die)"
+    },
+    {
+      "id": "f1jKsR65c2o",
+      "title": "9850X3D Overclocking results (8000mhz vs 6400mhz, 2200 fclk, A-die)"
+    },
+    {
+      "id": "uOVb9mCA6Yo",
+      "title": "Best DDR4 RAM and MOTHERBOARD! (Samsung B Die, Acer Predator Vesta RGB 32GB, MSI PRO Z790-P)"
+    },
+    {
+      "id": "WjWoug_gDnI",
+      "title": "How to update Gigabyte Bios (Q-FLASH, Z790, Z690)"
+    },
+    {
+      "id": "uA-R5tOKZgA",
+      "title": "How to update MSI bios (M-FLASH, Z790, Z690)"
+    },
+    {
+      "id": "tao_QEXEk-k",
+      "title": "Ram Cooling (DDR5)"
+    },
+    {
+      "id": "0BLVlb-vEzM",
+      "title": "Thermal Grizzly Lapping Tool and Contact Frame results (14900k)"
+    }
+  ],
+  "benchmarking": [
+    {
+      "id": "DdPDZQYpDvw",
+      "title": "8800CL36 270K Rainbow Six Siege Benchmark | 1080p low | 5070 ti"
+    },
+    {
+      "id": "2U4YFItGVvo",
+      "title": "8800CL36 270K Rainbow Six Siege Benchmark | 1440p low | 5070 ti"
+    },
+    {
+      "id": "LQhG7J0J4kI",
+      "title": "8200CL34 14900KS Rainbow Six Siege Benchmark | 1920x1080 low | 5070 ti"
+    },
+    {
+      "id": "VrqJfZHLT7I",
+      "title": "8200CL34 14900KS Marvel Rivals Benchmark | 1920x1080 low | 5070 ti"
+    },
+    {
+      "id": "EH3wb1_FF7M",
+      "title": "8200CL34 14900KS CS2 Benchmark | 1280x1024 low | 5070 ti"
+    },
+    {
+      "id": "GE8lZ3XCacw",
+      "title": "8200CL34 14900KS CS2 Benchmark | 1280x960 low | 5070 ti"
+    },
+    {
+      "id": "y3BbK8LE7nw",
+      "title": "8200CL34 14900KS CS2 Benchmark | 1920x1080 low | 5070 ti"
+    },
+    {
+      "id": "cE2X86ZXGvM",
+      "title": "9850x3d 6200CL26 CS2 Benchmark | 1440p low | 9070xt"
+    },
+    {
+      "id": "wELibyCFkGs",
+      "title": "9850x3d 6200CL26 CS2 Benchmark | 1080p low | 9070xt"
+    },
+    {
+      "id": "17pNisFe9uk",
+      "title": "9850x3d 6200CL26 Rainbow Six Siege Benchmark | 1080p low | 9070xt"
+    },
+    {
+      "id": "sOJQg4xXlPM",
+      "title": "9850x3d 6200CL26 Rainbow Six Siege Benchmark | 1440p low | 9070xt"
+    },
+    {
+      "id": "0Jt6K6_8FDU",
+      "title": "9850x3d 6200CL26 Marvel Rivals Benchmark | 1080p low | 9070xt"
+    },
+    {
+      "id": "jAXBDGRDcDk",
+      "title": "9850x3d 6200CL26 Marvel Rivals Benchmark | 1440p low | 9070xt"
+    },
+    {
+      "id": "9BKTzapbbBY",
+      "title": "9850x3d 6200CL26 BO7 Benchmark | 1080p low | 9070xt"
+    },
+    {
+      "id": "Qpv7pxn8uRg",
+      "title": "9850x3d 6200CL26 BO7 Benchmark | 1440p low | 9070xt"
+    },
+    {
+      "id": "WPcc_EBO4zw",
+      "title": "270k Rainbow 6 Siege Benchmark | 1080p LOW | 569FPS"
+    },
+    {
+      "id": "zgDSoYYaPQk",
+      "title": "270k CS2 BENCHMARK | 1080p LOW | 967.3FPS"
+    },
+    {
+      "id": "NesEW_6ev5U",
+      "title": "270k plus Marvel Rivals Benchmark 1080p Low"
+    },
+    {
+      "id": "Zii58tWNMw4",
+      "title": "Rainbow 6 Siege Benchmark 14900kf DDR4 1080p low"
+    },
+    {
+      "id": "bLs6T1BPqEw",
+      "title": "1063.7 FPS CS2 Benchmark 14900kf DDR4 1080p low"
+    },
+    {
+      "id": "AEk_88L_8es",
+      "title": "14900KF DDR4 Marvel Rivals Benchmark 1080p Low"
+    }
+  ]
+}
