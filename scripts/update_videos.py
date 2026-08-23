@@ -6,9 +6,7 @@ New feed entries are added to the top of the list and view counts are
 refreshed for any video still in the feed, then every marked section is
 regenerated:
 
-  youtube.html    LATEST3:<key> / POPULAR3:<key> for both channels,
-                  plus the full VIDEOS:mateopctech grid
-  benchmarking.html  full VIDEOS:benchmarking grid
+  youtube.html    LATEST3:<key> / POPULAR3:<key> for both channels
   index.html      LATEST (newest video from each channel)
 
 Note: view counts for videos older than the feed's 15 entries stay frozen at
@@ -26,8 +24,8 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_FILE = ROOT / "data" / "videos.json"
 
 CHANNELS = [
-    {"key": "mateopctech", "channel_id": "UCD3Pt35kAHzTV33K2yqwxpQ", "page": "youtube.html", "label": "Mateo PC Tech"},
-    {"key": "benchmarking", "channel_id": "UCxLvCr1i21JT2uxkZr1XvcA", "page": "benchmarking.html", "label": "Mateo Benchmarking"},
+    {"key": "mateopctech", "channel_id": "UCD3Pt35kAHzTV33K2yqwxpQ", "label": "Mateo PC Tech"},
+    {"key": "benchmarking", "channel_id": "UCxLvCr1i21JT2uxkZr1XvcA", "label": "Mateo Benchmarking"},
 ]
 
 FEED_URL = "https://www.youtube.com/feeds/videos.xml?channel_id={}"
@@ -122,10 +120,6 @@ def main():
 
         videos = data[ch["key"]]
         popular = sorted(videos, key=lambda v: v.get("views", 0), reverse=True)
-
-        # Full archive grid on the channel's own page
-        if rebuild_section(ROOT / ch["page"], f"VIDEOS:{ch['key']}", [make_card(v) for v in videos]):
-            changed_pages.add(ch["page"])
 
         # Overview rows on the YouTube tab
         yt = ROOT / "youtube.html"
