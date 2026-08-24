@@ -36,7 +36,7 @@ NS = {
 }
 
 CARD_TEMPLATE = """    <div class="video">
-      <a href="https://www.youtube.com/watch?v={id}" target="_blank"><img src="https://i.ytimg.com/vi/{id}/hqdefault.jpg" alt="Video thumbnail"></a>
+      <a href="https://www.youtube.com/watch?v={id}" target="_blank"><img src="https://i.ytimg.com/vi/{id}/hqdefault.jpg" alt="{title}"></a>
       <div class="info">
         <a href="https://www.youtube.com/watch?v={id}" target="_blank">{title}</a>{meta}
       </div>
@@ -44,7 +44,12 @@ CARD_TEMPLATE = """    <div class="video">
 
 
 def escape_html(text):
-    return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    return (
+        text.replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+    )
 
 
 def format_views(views):
