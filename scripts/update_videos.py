@@ -36,7 +36,7 @@ NS = {
 }
 
 CARD_TEMPLATE = """    <div class="video">
-      <a href="https://www.youtube.com/watch?v={id}" target="_blank"><img src="https://i.ytimg.com/vi/{id}/hqdefault.jpg" alt="{title}"></a>
+      <a href="https://www.youtube.com/watch?v={id}" target="_blank" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/{id}/hqdefault.jpg" alt="{title}" width="480" height="360" decoding="async"{loading}></a>
       <div class="info">
         <a href="https://www.youtube.com/watch?v={id}" target="_blank">{title}</a>{meta}
       </div>
@@ -77,10 +77,13 @@ def fetch_feed(channel_id):
     return videos
 
 
-def make_card(video, meta_text=None):
+def make_card(video, meta_text=None, eager=True):
     meta = f'\n        <div class="meta">{meta_text}</div>' if meta_text else ""
     return CARD_TEMPLATE.format(
-        id=video["id"], title=escape_html(video["title"]), meta=meta
+        id=video["id"],
+        title=escape_html(video["title"]),
+        meta=meta,
+        loading="" if eager else ' loading="lazy"',
     )
 
 
@@ -128,12 +131,12 @@ def main():
 
         # Overview rows on the YouTube tab
         yt = ROOT / "youtube.html"
-        if rebuild_section(yt, f"LATEST3:{ch['key']}", [make_card(v) for v in videos[:3]]):
+        if rebuild_section(yt, f"LATEST3:{ch['key']}", [make_card(v, eager=(ch["key"] == CHANNELS[0]["key"])) for v in videos[:3]]):
             changed_pages.add("youtube.html")
         if rebuild_section(
             yt,
             f"POPULAR3:{ch['key']}",
-            [make_card(v, format_views(v.get("views", 0))) for v in popular[:3]],
+            [make_card(v, format_views(v.get("views", 0)), eager=False) for v in popular[:3]],
         ):
             changed_pages.add("youtube.html")
 
