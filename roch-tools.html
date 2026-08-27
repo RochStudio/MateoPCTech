@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roch Tools - Mateo PC Tech</title>
-  <meta name="description" content="Roch Viewer — a free read-only memory-controller and timing viewer for Intel and AMD. Plus Roch GPU and Roch NVRAM.">
+  <meta name="description" content="Roch Viewer and Roch NVRAM, free tools for reading memory timings and editing BIOS NVRAM. Plus Roch GPU.">
   <meta property="og:title" content="Roch Tools - Mateo PC Tech">
-  <meta property="og:description" content="Roch Viewer — a free read-only memory-controller and timing viewer for Intel and AMD. Plus Roch GPU and Roch NVRAM.">
+  <meta property="og:description" content="Roch Viewer and Roch NVRAM, free tools for reading memory timings and editing BIOS NVRAM. Plus Roch GPU.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mateopctech.com/roch-tools">
   <meta property="og:image" content="https://yt3.googleusercontent.com/d6wcgiumeag_6_hJzusZ-VKq3-vsMR2aSPmc7PlqZ5YQZp1AxAwJO6lMt98lwipFhR4Zd15G=s900-c-k-c0x00ffffff-no-rj">
@@ -15,17 +15,50 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Roch Viewer",
-    "softwareVersion": "1.0.0",
-    "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "Windows 10, Windows 11",
-    "description": "A read-only memory-controller and timing viewer for Windows. Reads the memory controller, modules, board and CPU directly on Intel LGA1700, LGA1851 and AMD AM5.",
-    "url": "https://mateopctech.com/roch-tools",
-    "downloadUrl": "https://github.com/RochStudio/Roch-Viewer/releases",
-    "license": "https://www.gnu.org/licenses/gpl-3.0.html",
-    "author": { "@type": "Person", "name": "Mateo", "url": "https://mateopctech.com/" },
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Roch Viewer",
+        "softwareVersion": "1.0.0",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Windows 10, Windows 11",
+        "description": "A read-only memory-controller and timing viewer for Windows. Reads the memory controller, modules, board and CPU directly on Intel LGA1700, LGA1851 and AMD AM5.",
+        "url": "https://mateopctech.com/roch-tools",
+        "downloadUrl": "https://github.com/RochStudio/Roch-Viewer/releases",
+        "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+        "author": {
+          "@type": "Person",
+          "name": "Mateo",
+          "url": "https://mateopctech.com/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Roch NVRAM",
+        "softwareVersion": "1.0.0",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Windows 10, Windows 11",
+        "description": "A Windows editor for AMI SCEWIN NVRAM exports, with backup, preflight checks and verified import.",
+        "url": "https://mateopctech.com/roch-tools",
+        "downloadUrl": "https://github.com/RochStudio/Roch-NVRAM/releases",
+        "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+        "author": {
+          "@type": "Person",
+          "name": "Mateo",
+          "url": "https://mateopctech.com/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    ]
   }
   </script>
   <link rel="canonical" href="https://mateopctech.com/roch-tools">
@@ -91,6 +124,45 @@
   </div>
 
   <div class="card">
+    <h3>Roch NVRAM</h3>
+    <p>
+      A Windows editor for AMI SCEWIN NVRAM exports. It reads the live NVRAM, lets you queue
+      setting changes, and writes them only after a backup, a fresh re-export confirming
+      nothing moved, and a value-by-value verification afterwards. It is the SCEWIN round
+      trip with a review step in the middle &mdash; you see exactly which settings will change
+      before anything is written.
+    </p>
+
+    <p>
+      <strong>Warning:</strong> this program writes firmware settings. Incorrect voltage,
+      clock, memory, security, or boot values can stop a machine from starting. Keep Clear
+      CMOS or BIOS Flashback available before you use it.
+    </p>
+
+    <h3>What it does</h3>
+    <ul>
+      <li><strong>Export and Import</strong> &mdash; the SCEWIN round trip as two buttons, with the queued changes shown in between</li>
+      <li><strong>Preflight checks</strong> &mdash; the import refuses to run if the HII CRC changed, a queued setting went missing, its value changed since you queued it, or it became ambiguous</li>
+      <li><strong>Backup and verification</strong> &mdash; a timestamped backup before every import, then every requested value is checked afterwards</li>
+      <li><strong>NVRAM tab</strong> &mdash; the full table with Setting, Help String, Token, Offset, Width, BIOS Default and Value, searchable and filterable. Settings the parser cannot read unambiguously are greyed out rather than guessed at</li>
+      <li><strong>Pending Changes tab</strong> &mdash; before and after for every queued change, exportable as a modified nvram.txt or a transaction JSON</li>
+      <li><strong>Compare tab</strong> &mdash; diff two NVRAM files by token, offset and width, with a CSV export</li>
+      <li><strong>Log tab</strong> &mdash; a catalog of every NVRAM opened, archived and content-addressed by SHA-256</li>
+      <li><strong>Load NVRAM</strong> &mdash; restore settings from a saved file after a Clear CMOS; every difference is queued as a normal change, so the same checks apply</li>
+      <li><strong>Offline mode</strong> &mdash; a dry run that never touches firmware and needs no administrator rights</li>
+    </ul>
+
+    <h3>Requirements</h3>
+    <ul>
+      <li>Windows, run as administrator</li>
+      <li>Nothing to install &mdash; Python and Qt are inside the executable. Bundled AMISCE 5.05.01.0002</li>
+    </ul>
+
+    <a class="btn" href="https://github.com/RochStudio/Roch-NVRAM/releases" target="_blank">Download 1.0.0</a>
+    <a class="btn grey" href="https://github.com/RochStudio/Roch-NVRAM" target="_blank">View on GitHub</a>
+  </div>
+
+  <div class="card">
     <h3>Roch GPU</h3>
     <p>Coming soon.</p>
     <!-- Full description, ready to restore when the tool launches:
@@ -105,11 +177,6 @@
     <a class="btn" href="https://github.com/RochStudio/Roch-GPU/releases" target="_blank">Download</a>
     <a class="btn grey" href="https://github.com/RochStudio/Roch-GPU" target="_blank">View on GitHub</a>
     -->
-  </div>
-
-  <div class="card">
-    <h3>Roch NVRAM</h3>
-    <p>Coming soon.</p>
   </div>
 
   <a class="btn" href="https://x.com/MateoPCTech" target="_blank">Follow for release news</a>
