@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roch Tools - Mateo PC Tech</title>
-  <meta name="description" content="Roch Viewer and Roch NVRAM, free tools for reading memory timings and editing BIOS NVRAM. Plus Roch GPU.">
+  <meta name="description" content="Roch Viewer, Roch GPU and Roch NVRAM — free Windows tools for memory timings, GPU tuning and BIOS NVRAM.">
   <meta property="og:title" content="Roch Tools - Mateo PC Tech">
-  <meta property="og:description" content="Roch Viewer and Roch NVRAM, free tools for reading memory timings and editing BIOS NVRAM. Plus Roch GPU.">
+  <meta property="og:description" content="Roch Viewer, Roch GPU and Roch NVRAM — free Windows tools for memory timings, GPU tuning and BIOS NVRAM.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mateopctech.com/roch-tools">
   <meta property="og:image" content="https://yt3.googleusercontent.com/d6wcgiumeag_6_hJzusZ-VKq3-vsMR2aSPmc7PlqZ5YQZp1AxAwJO6lMt98lwipFhR4Zd15G=s900-c-k-c0x00ffffff-no-rj">
@@ -25,6 +25,27 @@
         "description": "A read-only memory-controller and timing viewer for Windows. Reads the memory controller, modules, board and CPU directly on Intel LGA1700, LGA1851 and AMD AM5.",
         "url": "https://mateopctech.com/roch-tools",
         "downloadUrl": "https://github.com/RochStudio/Roch-Viewer/releases",
+        "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+        "author": {
+          "@type": "Person",
+          "name": "Mateo",
+          "url": "https://mateopctech.com/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Roch GPU",
+        "softwareVersion": "1.0.0",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Windows 10, Windows 11",
+        "description": "An Afterburner-style GPU tuning tool for Windows driving both NVIDIA and AMD cards from one executable: clocks, voltage, power limit, fan control, V/F curve editor, live monitoring and a CLI.",
+        "url": "https://mateopctech.com/roch-tools",
+        "downloadUrl": "https://github.com/RochStudio/Roch-GPU/releases",
         "license": "https://www.gnu.org/licenses/gpl-3.0.html",
         "author": {
           "@type": "Person",
@@ -124,6 +145,52 @@
   </div>
 
   <div class="card">
+    <h3>Roch GPU</h3>
+    <p>
+      An Afterburner-style GPU tuning tool for Windows that drives both NVIDIA and AMD cards
+      from one executable. Clocks, voltage, power limit, fan control, live monitoring, a V/F
+      curve editor, and five profile slots. No kernel driver &mdash; everything goes through the
+      vendors' own user-mode libraries, the same route Afterburner and Adrenalin take.
+    </p>
+
+    <p>
+      <strong>Warning:</strong> writing clocks and voltages to a GPU can crash, corrupt work
+      in progress, and in the extreme damage hardware.
+    </p>
+
+    <h3>What it does</h3>
+    <ul>
+      <li><strong>Adapts to the card</strong> &mdash; the window is built from what the driver reports, so controls your card does not support are hidden rather than shown greyed out</li>
+      <li><strong>Clocks and limits</strong> &mdash; core and memory offsets snapped to the driver's own granularity, power limit, and temperature limit on NVIDIA</li>
+      <li><strong>Voltage</strong> &mdash; boost percentage and the NVVDD/MSVDD rails on NVIDIA, an undervolt offset in mV on AMD</li>
+      <li><strong>V/F curve editor</strong> (NVIDIA) &mdash; reads the card's real table and plots what it will actually do. Drag or nudge points, and flatten above a chosen voltage to undervolt</li>
+      <li><strong>Extreme OC</strong> &mdash; the levers that can brown a card out, each armed separately and off by default, so a failure tells you which one caused it</li>
+      <li><strong>Fan control</strong> &mdash; fixed percentage or a curve, plus zero RPM and memory timing on AMD</li>
+      <li><strong>Hardware monitor</strong> &mdash; graphs and a telemetry table of every sensor with current, minimum, maximum and average. It is the only thing that polls the driver, so closing it costs nothing while you play</li>
+      <li><strong>Five profile slots</strong> with apply-at-logon and tray operation</li>
+      <li><strong>Built-in CLI</strong> &mdash; the same executable with a command instead of a window: info, monitor, apply, apply-profile, reset, diag and startup</li>
+    </ul>
+
+    <h3>Tested on</h3>
+    <ul>
+      <li>RTX 5070 Ti (Blackwell) &mdash; full feature set</li>
+      <li>RTX 4070 Ti and RTX 4070 (Ada)</li>
+      <li>RX 9070 XT (RDNA 4)</li>
+    </ul>
+    <p>The tool asks the driver what it supports rather than assuming, so other cards should work.</p>
+
+    <h3>Requirements</h3>
+    <ul>
+      <li>Windows. The window asks for administrator rights, since writing clocks needs them; the read-only CLI commands do not</li>
+      <li>Nothing to install &mdash; the EXE is self-contained, no .NET runtime needed</li>
+    </ul>
+
+    <p>Free and open source (GPL-3.0).</p>
+    <a class="btn" href="https://github.com/RochStudio/Roch-GPU/releases" target="_blank">Download 1.0.0</a>
+    <a class="btn grey" href="https://github.com/RochStudio/Roch-GPU" target="_blank">View on GitHub</a>
+  </div>
+
+  <div class="card">
     <h3>Roch NVRAM</h3>
     <p>
       A Windows editor for AMI SCEWIN NVRAM exports. It reads the live NVRAM, lets you queue
@@ -160,23 +227,6 @@
 
     <a class="btn" href="https://github.com/RochStudio/Roch-NVRAM/releases" target="_blank">Download 1.0.0</a>
     <a class="btn grey" href="https://github.com/RochStudio/Roch-NVRAM" target="_blank">View on GitHub</a>
-  </div>
-
-  <div class="card">
-    <h3>Roch GPU</h3>
-    <p>Coming soon.</p>
-    <!-- Full description, ready to restore when the tool launches:
-    A lightweight Windows overclocking and undervolting utility for NVIDIA and AMD graphics cards.
-    It reads your card, driver version, vBIOS, and VRAM on launch, then puts the voltage curve,
-    clocks, power limit, and fans in one compact window.
-    Features: voltage offset (mV) undervolting; core and memory clock offsets; power limit
-    percentage offset; memory timing including fast timing; fan control with a Zero RPM idle
-    toggle; built-in monitor and log with limiter sampling; Apply/Revert/Reset; five profile
-    slots with auto-apply at logon.
-    Buttons for when the repo is public:
-    <a class="btn" href="https://github.com/RochStudio/Roch-GPU/releases" target="_blank">Download</a>
-    <a class="btn grey" href="https://github.com/RochStudio/Roch-GPU" target="_blank">View on GitHub</a>
-    -->
   </div>
 
   <a class="btn" href="https://x.com/MateoPCTech" target="_blank">Follow for release news</a>
