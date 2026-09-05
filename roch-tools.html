@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roch Tools - Mateo PC Tech</title>
-  <meta name="description" content="Roch Viewer, Roch GPU and Roch NVRAM — free Windows tools for memory timings, GPU tuning and BIOS NVRAM.">
+  <meta name="description" content="Roch Viewer, Roch CPU, Roch GPU, Roch Stress Test and Roch NVRAM — free Windows tools for memory timings, CPU tuning, GPU tuning, stress testing and BIOS NVRAM.">
   <meta property="og:title" content="Roch Tools - Mateo PC Tech">
-  <meta property="og:description" content="Roch Viewer, Roch GPU and Roch NVRAM — free Windows tools for memory timings, GPU tuning and BIOS NVRAM.">
+  <meta property="og:description" content="Roch Viewer, Roch CPU, Roch GPU, Roch Stress Test and Roch NVRAM — free Windows tools for memory timings, CPU tuning, GPU tuning, stress testing and BIOS NVRAM.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mateopctech.com/roch-tools">
   <meta property="og:image" content="https://yt3.googleusercontent.com/d6wcgiumeag_6_hJzusZ-VKq3-vsMR2aSPmc7PlqZ5YQZp1AxAwJO6lMt98lwipFhR4Zd15G=s900-c-k-c0x00ffffff-no-rj">
@@ -67,6 +67,48 @@
         "description": "A Windows editor for AMI SCEWIN NVRAM exports, with backup, preflight checks and verified import.",
         "url": "https://mateopctech.com/roch-tools",
         "downloadUrl": "https://github.com/RochStudio/Roch-NVRAM/releases",
+        "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+        "author": {
+          "@type": "Person",
+          "name": "Mateo",
+          "url": "https://mateopctech.com/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Roch CPU",
+        "softwareVersion": "1.0.0",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Windows 10, Windows 11",
+        "description": "Board-independent CPU and memory tuning for Intel LGA1700 and AMD Ryzen (Zen 2 to Zen 5): ratios, voltages and power limits, Curve Optimizer, and per-DIMM DDR5 rails.",
+        "url": "https://mateopctech.com/roch-tools",
+        "downloadUrl": "https://github.com/RochStudio/Roch-CPU/releases",
+        "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+        "author": {
+          "@type": "Person",
+          "name": "Mateo",
+          "url": "https://mateopctech.com/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Roch Stress Test",
+        "softwareVersion": "1.0.0",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Windows 10, Windows 11",
+        "description": "One window for every stress test on the machine — Prime95, y-cruncher, TestMem5, RAM Test Pro, Linpack, OCCT, Cinebench, memtest_vulkan and 3DMark 11 — with presets, time limits and live failure detection.",
+        "url": "https://mateopctech.com/roch-tools",
+        "downloadUrl": "https://github.com/RochStudio/Roch-StressTest/releases",
         "license": "https://www.gnu.org/licenses/gpl-3.0.html",
         "author": {
           "@type": "Person",
@@ -227,6 +269,76 @@
 
     <a class="btn" href="https://github.com/RochStudio/Roch-NVRAM/releases" target="_blank">Download 1.0.0</a>
     <a class="btn grey" href="https://github.com/RochStudio/Roch-NVRAM" target="_blank">View on GitHub</a>
+  </div>
+
+  <div class="card">
+    <h3>Roch CPU</h3>
+    <p>
+      Board-independent CPU and memory tuning for Windows. On <strong>Intel LGA1700</strong>
+      it drives ratios, FIVR voltage domains, package power limits and per-DIMM DDR5 PMIC
+      rails through the CPU and chipset &mdash; the same interfaces on MSI, ASUS, ASRock and
+      Gigabyte. On <strong>AMD Ryzen</strong> (Zen 2 to Zen 5) it talks to the SMU for PPT /
+      TDC / EDC, thermal limit, PBO scalar, Curve Optimizer and FMax, plus the same DDR5
+      rails over the FCH SMBus.
+    </p>
+
+    <p>
+      <strong>Warning:</strong> writing ratios and voltages can crash the machine, corrupt
+      work in progress, and in the extreme damage hardware. Nothing here persists across a
+      reboot, but a bad value is live the moment you press Apply.
+    </p>
+
+    <h3>What it drives</h3>
+    <ul>
+      <li><strong>Intel</strong> &mdash; all-core and per-active-core ratios, E-core and ring ratios, core / ring / SA / GT voltages via the OC mailbox, PL1 / PL2, and DDR5 VDD / VDDQ / VPP per DIMM</li>
+      <li><strong>AMD</strong> &mdash; PPT, TDC, EDC, Tctl max, PBO scalar, all-core and per-core Curve Optimizer, FMax, and DDR5 VDD / VDDQ / VPP</li>
+      <li><strong>Safety checks</strong> &mdash; core-voltage applies are checked against the Super I/O rail on Intel; DDR5 rails are calibrated against each PMIC's ADC and refused when the scale cannot be verified</li>
+    </ul>
+
+    <h3>Requirements</h3>
+    <ul>
+      <li>Windows 10 or 11, 64-bit, run as administrator</li>
+      <li>.NET 8 Desktop Runtime (or a self-contained build)</li>
+      <li><code>WinRing0x64.sys</code> beside the EXE (bundled). On AMD, optional <a href="https://pawnio.eu" target="_blank">PawnIO</a> for PPT / TDC / EDC read-back</li>
+    </ul>
+
+    <p>Free and open source (GPL-3.0).</p>
+    <a class="btn" href="https://github.com/RochStudio/Roch-CPU/releases" target="_blank">Download 1.0.0</a>
+    <a class="btn grey" href="https://github.com/RochStudio/Roch-CPU" target="_blank">View on GitHub</a>
+  </div>
+
+  <div class="card">
+    <h3>Roch Stress Test</h3>
+    <p>
+      One window for every stress test on the machine. Prime95, y-cruncher, TestMem5, RAM
+      Test Pro, both Linpacks, OCCT, Cinebench, memtest_vulkan and 3DMark 11 &mdash; each with
+      presets that say what they actually do, a time limit, and live failure detection. It
+      does not reimplement the tests; every tool runs as it would if you started it yourself.
+    </p>
+
+    <p>
+      <strong>Warning:</strong> these tests exist to break things. Linpack in particular pulls
+      more current than anything else here. Watch temperatures, know your memory voltage
+      limits, and do not leave a first run unattended.
+    </p>
+
+    <h3>What it adds</h3>
+    <ul>
+      <li><strong>Quick Start</strong> &mdash; two columns of tool cards; one test runs at a time</li>
+      <li><strong>Live failure detection</strong> &mdash; watches logs and console output so a worker that fails at 4am still gets caught, with a transcript under <code>%LOCALAPPDATA%\RochStressTest\logs\</code></li>
+      <li><strong>Memory cleaner</strong> &mdash; live free-RAM readout and a Clean memory button so memory tests actually hit the DIMMs, not the page file</li>
+      <li><strong>Sensible defaults</strong> &mdash; memory sizes and time limits derived from what is free, not hardcoded constants</li>
+    </ul>
+
+    <h3>Requirements</h3>
+    <ul>
+      <li>Windows 10 or 11, run as administrator (asked once at launch)</li>
+      <li>The bundled third-party tools beside the EXE (or use <code>RUN_AS_ADMIN.bat</code> from source)</li>
+    </ul>
+
+    <p>Free and open source.</p>
+    <a class="btn" href="https://github.com/RochStudio/Roch-StressTest/releases" target="_blank">Download 1.0.0</a>
+    <a class="btn grey" href="https://github.com/RochStudio/Roch-StressTest" target="_blank">View on GitHub</a>
   </div>
 
   <a class="btn" href="https://x.com/MateoPCTech" target="_blank">Follow for release news</a>
