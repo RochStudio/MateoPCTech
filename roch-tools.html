@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roch Tools - Mateo PC Tech</title>
-  <meta name="description" content="Roch Viewer, Roch GPU and Roch NVRAM — free Windows tools for memory timings, GPU tuning and BIOS NVRAM.">
+  <meta name="description" content="Roch Viewer, Roch CPU, Roch GPU, Roch NVRAM and Roch Stress Test — free Windows tools from Roch Studio.">
   <meta property="og:title" content="Roch Tools - Mateo PC Tech">
-  <meta property="og:description" content="Roch Viewer, Roch GPU and Roch NVRAM — free Windows tools for memory timings, GPU tuning and BIOS NVRAM.">
+  <meta property="og:description" content="Roch Viewer, Roch CPU, Roch GPU, Roch NVRAM and Roch Stress Test — free Windows tools from Roch Studio.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mateopctech.com/roch-tools">
   <meta property="og:image" content="https://yt3.googleusercontent.com/d6wcgiumeag_6_hJzusZ-VKq3-vsMR2aSPmc7PlqZ5YQZp1AxAwJO6lMt98lwipFhR4Zd15G=s900-c-k-c0x00ffffff-no-rj">
@@ -22,20 +22,25 @@
         "softwareVersion": "1.0.0",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Windows 10, Windows 11",
-        "description": "A read-only memory-controller and timing viewer for Windows. Reads the memory controller, modules, board and CPU directly on Intel LGA1700, LGA1851 and AMD AM5.",
+        "description": "Read-only memory-controller and timing viewer for Intel LGA1700, LGA1851 and AMD AM5.",
         "url": "https://mateopctech.com/roch-tools",
         "downloadUrl": "https://github.com/RochStudio/Roch-Viewer/releases",
         "license": "https://www.gnu.org/licenses/gpl-3.0.html",
-        "author": {
-          "@type": "Person",
-          "name": "Mateo",
-          "url": "https://mateopctech.com/"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        }
+        "author": {"@type": "Person", "name": "Mateo", "url": "https://mateopctech.com/"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Roch CPU",
+        "softwareVersion": "1.0.0",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Windows 10, Windows 11",
+        "description": "Board-independent CPU and memory tuning for Intel LGA1700 and AMD Ryzen Zen 2–5.",
+        "url": "https://mateopctech.com/roch-tools",
+        "downloadUrl": "https://github.com/RochStudio/Roch-CPU/releases",
+        "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+        "author": {"@type": "Person", "name": "Mateo", "url": "https://mateopctech.com/"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
       },
       {
         "@type": "SoftwareApplication",
@@ -43,20 +48,12 @@
         "softwareVersion": "1.0.0",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Windows 10, Windows 11",
-        "description": "An Afterburner-style GPU tuning tool for Windows driving both NVIDIA and AMD cards from one executable: clocks, voltage, power limit, fan control, V/F curve editor, live monitoring and a CLI.",
+        "description": "Afterburner-style GPU tuning for NVIDIA and AMD from one executable.",
         "url": "https://mateopctech.com/roch-tools",
         "downloadUrl": "https://github.com/RochStudio/Roch-GPU/releases",
         "license": "https://www.gnu.org/licenses/gpl-3.0.html",
-        "author": {
-          "@type": "Person",
-          "name": "Mateo",
-          "url": "https://mateopctech.com/"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        }
+        "author": {"@type": "Person", "name": "Mateo", "url": "https://mateopctech.com/"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
       },
       {
         "@type": "SoftwareApplication",
@@ -64,20 +61,24 @@
         "softwareVersion": "1.0.0",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Windows 10, Windows 11",
-        "description": "A Windows editor for AMI SCEWIN NVRAM exports, with backup, preflight checks and verified import.",
+        "description": "AMI SCEWIN NVRAM editor with backup, preflight checks and verified import.",
         "url": "https://mateopctech.com/roch-tools",
         "downloadUrl": "https://github.com/RochStudio/Roch-NVRAM/releases",
         "license": "https://www.gnu.org/licenses/gpl-3.0.html",
-        "author": {
-          "@type": "Person",
-          "name": "Mateo",
-          "url": "https://mateopctech.com/"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        }
+        "author": {"@type": "Person", "name": "Mateo", "url": "https://mateopctech.com/"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Roch Stress Test",
+        "softwareVersion": "1.0.0",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Windows 10, Windows 11",
+        "description": "One window for Prime95, y-cruncher, TestMem5, Linpack, OCCT and more, with live failure detection.",
+        "url": "https://mateopctech.com/roch-tools",
+        "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+        "author": {"@type": "Person", "name": "Mateo", "url": "https://mateopctech.com/"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
       }
     ]
   }
@@ -109,82 +110,50 @@
   <div class="card">
     <h3>Roch Viewer</h3>
     <p>
-      A read-only memory-controller and timing viewer for Windows. It reads the memory
-      controller, the modules, the board, and the CPU directly, and shows what they actually
-      report &mdash; the timings the controller was programmed with, the training results it
-      settled on, and the sensors that move while the machine runs. It changes no setting.
+      Read-only memory-controller and timing viewer for Windows. Shows what the controller,
+      modules, board and CPU actually report &mdash; timings, training results and live sensors.
+      It changes no setting.
     </p>
-
-    <h3>Supported platforms</h3>
     <ul>
-      <li><strong>Intel LGA1700</strong> (Z690/Z790) &mdash; DDR5 and DDR4</li>
-      <li><strong>Intel LGA1851</strong> (Z890) &mdash; DDR5</li>
-      <li><strong>AMD AM5</strong> / Granite Ridge &mdash; DDR5</li>
+      <li><strong>Platforms</strong> &mdash; Intel LGA1700, LGA1851, and AMD AM5</li>
+      <li><strong>Shows</strong> &mdash; timings, skew, telemetry, and a searchable advanced list</li>
+      <li><strong>Needs</strong> &mdash; Windows 10/11 x64 as administrator, plus <code>inpoutx64.dll</code> beside the EXE</li>
     </ul>
-
-    <h3>What it shows</h3>
-    <ul>
-      <li><strong>Summary</strong> &mdash; machine identity, the clock chain, and the timings worth seeing at a glance</li>
-      <li><strong>System Info</strong> &mdash; OS, CPU with code name and process node, board, chipset, Super I/O, and each module's SPD identity</li>
-      <li><strong>Timings</strong> &mdash; primary, secondary and tertiary, plus refresh, command, power-down and bus groups, read from both memory controllers side by side</li>
-      <li><strong>Skew</strong> &mdash; RTT, ODT and RON, VREF levels, per-group drive strengths and slew compensation, ODT latencies, and the DFE taps</li>
-      <li><strong>Misc</strong> &mdash; per-channel read latencies, ECS state, controller feature switches, preamble and postamble settings, and the DDR5 mode registers</li>
-      <li><strong>Telemetry</strong> &mdash; live clocks per logical processor, temperatures, package and core power, board voltages, GPU, and each DIMM's PMIC rails, each with min, max and average</li>
-      <li><strong>Advanced</strong> &mdash; every row in one searchable list, filtered as you type</li>
-    </ul>
-
-    <h3>Requirements</h3>
-    <ul>
-      <li>Windows 10 or 11, 64-bit, run as administrator</li>
-      <li><code>inpoutx64.dll</code> from Highresolution Enterprises, placed beside the EXE &mdash; it is not bundled. Without it the program still opens, but register-backed rows read nothing and say so.</li>
-    </ul>
-
     <p>Free and open source (GPL-3.0).</p>
     <a class="btn" href="https://github.com/RochStudio/Roch-Viewer/releases" target="_blank">Download 1.0.0</a>
     <a class="btn grey" href="https://github.com/RochStudio/Roch-Viewer" target="_blank">View on GitHub</a>
   </div>
 
   <div class="card">
+    <h3>Roch CPU</h3>
+    <p>
+      Board-independent CPU and memory tuning for <strong>Intel LGA1700</strong> and
+      <strong>AMD Ryzen</strong> (Zen 2 to Zen 5): ratios, voltages, power limits, Curve Optimizer,
+      and per-DIMM DDR5 rails.
+    </p>
+    <p><strong>Warning:</strong> bad values can crash or damage hardware. Changes do not survive a reboot.</p>
+    <ul>
+      <li><strong>Intel</strong> &mdash; ratios, OC mailbox voltages, PL1/PL2, DDR5 VDD/VDDQ/VPP</li>
+      <li><strong>AMD</strong> &mdash; PPT/TDC/EDC, PBO scalar, Curve Optimizer, FMax, DDR5 rails</li>
+      <li><strong>Needs</strong> &mdash; Windows 10/11 x64 as administrator, .NET 8 (or self-contained build)</li>
+    </ul>
+    <p>Free and open source (GPL-3.0).</p>
+    <a class="btn" href="https://github.com/RochStudio/Roch-CPU/releases" target="_blank">Download 1.0.0</a>
+    <a class="btn grey" href="https://github.com/RochStudio/Roch-CPU" target="_blank">View on GitHub</a>
+  </div>
+
+  <div class="card">
     <h3>Roch GPU</h3>
     <p>
-      An Afterburner-style GPU tuning tool for Windows that drives both NVIDIA and AMD cards
-      from one executable. Clocks, voltage, power limit, fan control, live monitoring, a V/F
-      curve editor, and five profile slots. No kernel driver &mdash; everything goes through the
-      vendors' own user-mode libraries, the same route Afterburner and Adrenalin take.
+      Afterburner-style GPU tuning for NVIDIA and AMD from one executable: clocks, voltage,
+      power limit, fan control, V/F curve, monitoring and profiles. No kernel driver.
     </p>
-
-    <p>
-      <strong>Warning:</strong> writing clocks and voltages to a GPU can crash, corrupt work
-      in progress, and in the extreme damage hardware.
-    </p>
-
-    <h3>What it does</h3>
+    <p><strong>Warning:</strong> writing clocks and voltages can crash or damage hardware.</p>
     <ul>
-      <li><strong>Adapts to the card</strong> &mdash; the window is built from what the driver reports, so controls your card does not support are hidden rather than shown greyed out</li>
-      <li><strong>Clocks and limits</strong> &mdash; core and memory offsets snapped to the driver's own granularity, power limit, and temperature limit on NVIDIA</li>
-      <li><strong>Voltage</strong> &mdash; boost percentage and the NVVDD/MSVDD rails on NVIDIA, an undervolt offset in mV on AMD</li>
-      <li><strong>V/F curve editor</strong> (NVIDIA) &mdash; reads the card's real table and plots what it will actually do. Drag or nudge points, and flatten above a chosen voltage to undervolt</li>
-      <li><strong>Extreme OC</strong> &mdash; the levers that can brown a card out, each armed separately and off by default, so a failure tells you which one caused it</li>
-      <li><strong>Fan control</strong> &mdash; fixed percentage or a curve, plus zero RPM and memory timing on AMD</li>
-      <li><strong>Hardware monitor</strong> &mdash; graphs and a telemetry table of every sensor with current, minimum, maximum and average. It is the only thing that polls the driver, so closing it costs nothing while you play</li>
-      <li><strong>Five profile slots</strong> with apply-at-logon and tray operation</li>
-      <li><strong>Built-in CLI</strong> &mdash; the same executable with a command instead of a window: info, monitor, apply, apply-profile, reset, diag and startup</li>
+      <li><strong>Controls</strong> &mdash; clocks, limits, voltage, fan curve, Extreme OC (off by default)</li>
+      <li><strong>Also</strong> &mdash; live monitor, five profiles, built-in CLI</li>
+      <li><strong>Needs</strong> &mdash; Windows; administrator for writes. Self-contained EXE</li>
     </ul>
-
-    <h3>Tested on</h3>
-    <ul>
-      <li>RTX 5070 Ti (Blackwell) &mdash; full feature set</li>
-      <li>RTX 4070 Ti and RTX 4070 (Ada)</li>
-      <li>RX 9070 XT (RDNA 4)</li>
-    </ul>
-    <p>The tool asks the driver what it supports rather than assuming, so other cards should work.</p>
-
-    <h3>Requirements</h3>
-    <ul>
-      <li>Windows. The window asks for administrator rights, since writing clocks needs them; the read-only CLI commands do not</li>
-      <li>Nothing to install &mdash; the EXE is self-contained, no .NET runtime needed</li>
-    </ul>
-
     <p>Free and open source (GPL-3.0).</p>
     <a class="btn" href="https://github.com/RochStudio/Roch-GPU/releases" target="_blank">Download 1.0.0</a>
     <a class="btn grey" href="https://github.com/RochStudio/Roch-GPU" target="_blank">View on GitHub</a>
@@ -193,40 +162,34 @@
   <div class="card">
     <h3>Roch NVRAM</h3>
     <p>
-      A Windows editor for AMI SCEWIN NVRAM exports. It reads the live NVRAM, lets you queue
-      setting changes, and writes them only after a backup, a fresh re-export confirming
-      nothing moved, and a value-by-value verification afterwards. It is the SCEWIN round
-      trip with a review step in the middle &mdash; you see exactly which settings will change
-      before anything is written.
+      AMI SCEWIN NVRAM editor for Windows. Queue setting changes, then write only after a
+      backup, preflight checks and value-by-value verification.
     </p>
-
-    <p>
-      <strong>Warning:</strong> this program writes firmware settings. Incorrect voltage,
-      clock, memory, security, or boot values can stop a machine from starting. Keep Clear
-      CMOS or BIOS Flashback available before you use it.
-    </p>
-
-    <h3>What it does</h3>
+    <p><strong>Warning:</strong> writes firmware settings. Keep Clear CMOS or BIOS Flashback ready.</p>
     <ul>
-      <li><strong>Export and Import</strong> &mdash; the SCEWIN round trip as two buttons, with the queued changes shown in between</li>
-      <li><strong>Preflight checks</strong> &mdash; the import refuses to run if the HII CRC changed, a queued setting went missing, its value changed since you queued it, or it became ambiguous</li>
-      <li><strong>Backup and verification</strong> &mdash; a timestamped backup before every import, then every requested value is checked afterwards</li>
-      <li><strong>NVRAM tab</strong> &mdash; the full table with Setting, Help String, Token, Offset, Width, BIOS Default and Value, searchable and filterable. Settings the parser cannot read unambiguously are greyed out rather than guessed at</li>
-      <li><strong>Pending Changes tab</strong> &mdash; before and after for every queued change, exportable as a modified nvram.txt or a transaction JSON</li>
-      <li><strong>Compare tab</strong> &mdash; diff two NVRAM files by token, offset and width, with a CSV export</li>
-      <li><strong>Log tab</strong> &mdash; a catalog of every NVRAM opened, archived and content-addressed by SHA-256</li>
-      <li><strong>Load NVRAM</strong> &mdash; restore settings from a saved file after a Clear CMOS; every difference is queued as a normal change, so the same checks apply</li>
-      <li><strong>Offline mode</strong> &mdash; a dry run that never touches firmware and needs no administrator rights</li>
+      <li><strong>Safe write path</strong> &mdash; backup, preflight, verified import</li>
+      <li><strong>Also</strong> &mdash; searchable NVRAM table, compare, offline dry-run</li>
+      <li><strong>Needs</strong> &mdash; Windows as administrator; Python/Qt bundled</li>
     </ul>
-
-    <h3>Requirements</h3>
-    <ul>
-      <li>Windows, run as administrator</li>
-      <li>Nothing to install &mdash; Python and Qt are inside the executable. Bundled AMISCE 5.05.01.0002</li>
-    </ul>
-
+    <p>Free and open source (GPL-3.0).</p>
     <a class="btn" href="https://github.com/RochStudio/Roch-NVRAM/releases" target="_blank">Download 1.0.0</a>
     <a class="btn grey" href="https://github.com/RochStudio/Roch-NVRAM" target="_blank">View on GitHub</a>
+  </div>
+
+  <div class="card">
+    <h3>Roch Stress Test</h3>
+    <p>
+      One window for Prime95, y-cruncher, TestMem5, RAM Test Pro, Linpack, OCCT, Cinebench,
+      memtest_vulkan and 3DMark 11 &mdash; with presets, time limits and live failure detection.
+    </p>
+    <p><strong>Warning:</strong> these tests push hardware hard. Watch temps; do not leave a first run unattended.</p>
+    <ul>
+      <li><strong>Quick Start</strong> &mdash; one test at a time from tool cards</li>
+      <li><strong>Failure detection</strong> &mdash; watches logs/console; saves failed-run transcripts</li>
+      <li><strong>Needs</strong> &mdash; Windows as administrator; third-party tools beside the EXE</li>
+    </ul>
+    <p>Free and open source.</p>
+    <a class="btn grey" href="https://github.com/RochStudio/Roch-StressTest" target="_blank">View on GitHub</a>
   </div>
 
   <a class="btn" href="https://x.com/MateoPCTech" target="_blank">Follow for release news</a>
