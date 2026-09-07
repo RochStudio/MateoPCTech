@@ -204,3 +204,14 @@ a:focus-visible,
   object-fit: cover;
   background: #222222;
 }
+
+/* X / Twitter timeline embed */
+.x-feed .twitter-timeline {
+  display: block;
+  margin: 12px 0 8px 0;
+  min-height: 520px;
+}
+
+.x-feed .x-follow {
+  margin: 12px 0 0 0;
+}
