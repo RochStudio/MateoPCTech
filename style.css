@@ -205,11 +205,43 @@ a:focus-visible,
   background: #222222;
 }
 
-/* X / Twitter timeline embed */
-.x-feed .twitter-timeline {
-  display: block;
+/* X posts — static cards (no widgets.js) */
+.x-posts {
+  display: grid;
+  gap: 12px;
   margin: 12px 0 8px 0;
-  min-height: 520px;
+}
+
+.x-post {
+  background: #111111;
+  border: 1px solid #333333;
+  padding: 14px 16px;
+}
+
+.x-post-text {
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  font-size: 15px;
+  word-wrap: break-word;
+}
+
+.x-post-text a {
+  color: #ef5350;
+}
+
+.x-post-meta {
+  margin: 0;
+  font-size: 12px;
+  color: #888888;
+}
+
+.x-post-meta a {
+  color: #888888;
+  text-decoration: none;
+}
+
+.x-post-meta a:hover {
+  color: #ef5350;
 }
 
 .x-feed .x-follow {
