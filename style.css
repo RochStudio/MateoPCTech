@@ -205,7 +205,7 @@ a:focus-visible,
   background: #222222;
 }
 
-/* X posts — static cards (no widgets.js) */
+/* X posts — static cards with media (no widgets.js) */
 .x-posts {
   display: grid;
   gap: 12px;
@@ -215,6 +215,23 @@ a:focus-visible,
 .x-post {
   background: #111111;
   border: 1px solid #333333;
+  overflow: hidden;
+}
+
+.x-post-media {
+  display: block;
+  background: #222222;
+}
+
+.x-post-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.x-post-body {
   padding: 14px 16px;
 }
 

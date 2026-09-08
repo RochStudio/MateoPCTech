@@ -5,22 +5,16 @@
     {
       "url": "https://x.com/MateoPCTech/status/2096698644460110005",
       "text": "New vid https://www.youtube.com/watch?v=hdpQ-GmqSig&t=4s",
-      "date": "Sep 6, 2026"
+      "date": "Sep 6, 2026",
+      "image": "https://i.ytimg.com/vi/hdpQ-GmqSig/hqdefault.jpg",
+      "image_alt": "Z790MPOWER Review video thumbnail"
     },
     {
       "url": "https://x.com/MateoPCTech/status/2096060956656754844",
       "text": "Z790MPOWER vid coming soon",
-      "date": "Sep 5, 2026"
-    },
-    {
-      "url": "https://x.com/MateoPCTech/status/2089399656161636462",
-      "text": "Roch GPU OC coming soon",
-      "date": "Aug 17, 2026"
-    },
-    {
-      "url": "https://x.com/MateoPCTech/status/2087695168086429959",
-      "text": "Roch Viewer coming soon",
-      "date": "Aug 13, 2026"
+      "date": "Sep 5, 2026",
+      "image": "https://pbs.twimg.com/media/HRa0PVUbMAAknCj.png?name=small",
+      "image_alt": "Z790MPOWER coming soon"
     }
   ]
 }
