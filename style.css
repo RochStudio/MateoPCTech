@@ -264,3 +264,8 @@ a:focus-visible,
 .x-feed .x-follow {
   margin: 12px 0 0 0;
 }
+
+/* Homepage latest-videos subscribe CTA */
+.video-cta {
+  margin: 16px 0 28px 0;
+}
