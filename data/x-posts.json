@@ -1,20 +1,20 @@
 {
   "account": "https://x.com/MateoPCTech",
-  "updated": "2026-09-07",
+  "updated": "2026-09-12",
   "posts": [
+    {
+      "url": "https://x.com/MateoPCTech/status/2097393270099694074",
+      "text": "ROCH GPU 1.0.3 out now: https://github.com/RochStudio/Roch-GPU/releases/tag/v1.0.3",
+      "date": "Sep 8, 2026",
+      "image": "https://pbs.twimg.com/media/HRtvfcbWUAAglTX.jpg?name=small",
+      "image_alt": "ROCH GPU 1.0.3 out now: https://github.com/RochStudio/Roch-G"
+    },
     {
       "url": "https://x.com/MateoPCTech/status/2096698644460110005",
       "text": "New vid https://www.youtube.com/watch?v=hdpQ-GmqSig&t=4s",
       "date": "Sep 6, 2026",
       "image": "https://i.ytimg.com/vi/hdpQ-GmqSig/hqdefault.jpg",
-      "image_alt": "Z790MPOWER Review video thumbnail"
-    },
-    {
-      "url": "https://x.com/MateoPCTech/status/2096060956656754844",
-      "text": "Z790MPOWER vid coming soon",
-      "date": "Sep 5, 2026",
-      "image": "https://pbs.twimg.com/media/HRa0PVUbMAAknCj.png?name=small",
-      "image_alt": "Z790MPOWER coming soon"
+      "image_alt": "Video thumbnail"
     }
   ]
 }
