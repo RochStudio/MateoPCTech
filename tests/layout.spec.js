@@ -42,7 +42,7 @@ test('approved homepage is static, responsive, and styled in both modes', async 
   await expect(page.getByRole('link', { name: 'Explore the videos' })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Browse Roch Tools' })).toBeVisible();
   await expect(page.locator('.home-cards > .card')).toHaveCount(5);
-  await expect(page.locator('.hero')).toHaveCSS('display', 'grid');
+  await expect(page.locator('.hero')).toHaveCSS('display', 'block');
   await expect(page.locator('body')).toHaveCSS('background-color', 'rgb(16, 17, 18)');
   await page.setViewportSize({ width: 360, height: 800 });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
