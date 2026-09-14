@@ -8,8 +8,9 @@ for (const mode of ['dark', 'light']) {
       await page.goto('/');
       await expect(page.locator('.hero-copy > .eyebrow')).toHaveText('Welcome');
       await expect(page.locator('.hardware-art, .chip')).toHaveCount(0);
-      const panel = page.getByRole('region', { name: 'The tuning bench.' });
+      const panel = page.getByRole('region', { name: 'Quick links' });
       await expect(panel).toBeVisible();
+      await expect(panel.locator('.eyebrow, h2')).toHaveCount(0);
       const links = panel.getByRole('link');
       await expect(links).toHaveCount(3);
       await expect(links.nth(0)).toHaveAttribute('href', '/youtube');

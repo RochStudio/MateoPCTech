@@ -113,8 +113,6 @@ main > h3 { margin: 30px 0 20px; }
 .hero h1 span { color: var(--accent); }
 .hero-copy > p:not(.eyebrow) { font-size: 17px; line-height: 1.8; }
 .hero-toolkit { min-width: 0; padding: 30px; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); }
-.hero-toolkit > .eyebrow { margin-bottom: 10px; }
-.hero-toolkit h2 { font-size: clamp(28px, 3vw, 36px); margin-bottom: 24px; }
 .toolkit-links { display: grid; }
 .toolkit-links a { display: grid; grid-template-columns: 24px minmax(0, 1fr) 20px; gap: 16px; align-items: center; min-height: 82px; padding: 17px 0; border-top: 1px solid var(--border); text-decoration: none; }
 .toolkit-number { font: 11px Consolas, monospace; color: var(--muted); }
