@@ -269,3 +269,11 @@ a:focus-visible,
 .video-cta {
   margin: 16px 0 28px 0;
 }
+
+.tool-icon {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 0 0 0.75rem;
+  border-radius: 14px;
+}
