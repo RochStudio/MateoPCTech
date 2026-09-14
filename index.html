@@ -47,15 +47,16 @@
   </script>
   <link rel="canonical" href="https://mateopctech.com/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script src="/theme.js"></script>
   <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body class="home">
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header>
-  <h1>Mateo <span>PC Tech</span></h1>
-  <nav>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Mateo PC Tech home">Mateo <span>PC Tech</span></a>
+  <nav aria-label="Main navigation">
     <a href="/" class="active" aria-current="page">Home</a>
     <a href="/youtube">YouTube</a>
     <a href="/roch-tools">Roch Tools</a>
@@ -63,17 +64,35 @@
     <a href="/discord">Discord</a>
     <a href="/parts">Parts</a>
   </nav>
+  <button class="theme-toggle" type="button" data-theme-toggle hidden>
+    <svg class="theme-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    <span data-theme-label>Light mode</span>
+  </button>
 </header>
 
-<main id="main">
-  <h2>Welcome</h2>
-  <p>
+<main id="main" tabindex="-1">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow">Welcome / Intel &amp; AMD performance</p>
+      <h1 id="hero-title">More performance.<br> <span>Less guesswork.</span></h1>
+      <p>
     Mateo PC Tech is a channel about PC hardware, overclocking, and performance tuning.
     CPU and RAM overclocking guides, BIOS walkthroughs, benchmarks, and hardware comparisons
     for Intel and AMD platforms.
   </p>
+      <a class="btn" href="/youtube">Explore the videos <span aria-hidden="true">&nbsp;↗</span></a>
+      <a class="btn grey" href="/roch-tools">Browse Roch Tools</a>
+    </div>
+    <div class="hardware-art" aria-hidden="true">
+      <div class="art-top">The hardware / The settings / The results</div>
+      <div class="art-line"></div>
+      <div class="chip"><span>Mateo PC Tech</span>CPU / RAM<br>&amp; GPU.</div>
+      <div class="art-bottom"><span>INTEL + AMD</span><span>BUILT FOR ENTHUSIASTS ↗</span></div>
+    </div>
+  </section>
 
-  <h2>Latest Videos</h2>
+  <section class="latest" aria-labelledby="latest-title">
+  <div class="section-title"><h2 id="latest-title">Latest Videos</h2><span>WATCH / LEARN / TUNE</span></div>
   <!-- LATEST:START -->
   <div class="video-grid">
 
@@ -100,8 +119,53 @@
     <a class="btn" href="https://www.youtube.com/@MateoPcTech" target="_blank" rel="noopener noreferrer">Subscribe on YouTube</a>
     <a class="btn grey" href="/youtube">More videos</a>
   </p>
+  </section>
 
-  <h2>On X</h2>
+
+  <div class="home-cards">
+  <div class="card">
+    <p class="card-kicker">01 / WATCH</p>
+    <h2>YouTube Channel</h2>
+    <p>Overclocking guides, BIOS tutorials, and benchmarks. 20+ videos covering Intel 14th gen, Arrow Lake, X3D chips, DDR4/DDR5 tuning, and more. Plus a second channel, Mateo Benchmarking, dedicated to raw game benchmark runs.</p>
+    <a class="btn" href="https://www.youtube.com/@MateoPcTech" target="_blank" rel="noopener noreferrer">Subscribe on YouTube</a>
+    <a class="btn grey" href="/youtube">Watch Videos</a>
+  </div>
+
+  <div class="card">
+    <p class="card-kicker">02 / DOWNLOAD</p>
+    <h2>Roch Tools</h2>
+    <p>Free Windows tools from Roch Studio. Start with <strong>Roch Viewer</strong> (timings) and <strong>Roch CPU</strong> (Intel + AMD tuning), plus GPU, NVRAM, and Stress Test.</p>
+    <div class="tool-list">VIEWER · CPU · GPU · NVRAM · STRESS TEST</div>
+    <a class="btn" href="/roch-tools">Download tools</a>
+    <a class="btn grey" href="https://github.com/RochStudio" target="_blank">GitHub</a>
+  </div>
+
+  <div class="card">
+    <p class="card-kicker">03 / LEARN TOGETHER</p>
+    <h2>Skool Community</h2>
+    <p>Tired of crashes and &quot;stable&quot; overclocks that fall apart mid-game? Get more FPS, cooler temps, and real stability — with step-by-step guides, weekly live calls, and daily support from Mateo. <strong>$20/month.</strong></p>
+    <a class="btn" href="https://www.skool.com/mateo-tech-5956/about" target="_blank">Join on Skool</a>
+    <a class="btn grey" href="/skool">Learn More</a>
+  </div>
+
+  <div class="card">
+    <p class="card-kicker">04 / CONNECT</p>
+    <h2>Discord</h2>
+    <p>Hang out with other PC builders, talk overclocking and benchmarks, and get help with your build.</p>
+    <a class="btn" href="/discord">Learn More</a>
+    <a class="btn grey" href="https://discord.gg/hPze8rTxqJ" target="_blank">Join the Discord</a>
+  </div>
+
+  <div class="card">
+    <p class="card-kicker">05 / BUILD</p>
+    <h2>Recommended Parts</h2>
+    <p>The parts I recommend for building and overclocking.</p>
+    <a class="btn" href="/parts">See the List</a>
+  </div>
+  </div>
+
+  <section aria-labelledby="x-title">
+  <div class="section-title"><h2 id="x-title">On X</h2><span>@MateoPCTech</span></div>
   <div class="card x-feed">
     <p>Overclocking notes, tool releases, and quick tips from <a href="https://x.com/MateoPCTech" target="_blank" rel="noopener noreferrer">@MateoPCTech</a>.</p>
     <div class="x-posts">
@@ -127,44 +191,19 @@
     </div>
     <p class="x-follow"><a class="btn" href="https://x.com/MateoPCTech" target="_blank" rel="noopener noreferrer">Follow @MateoPCTech</a></p>
   </div>
-
-  <div class="card">
-    <h3>YouTube Channel</h3>
-    <p>Overclocking guides, BIOS tutorials, and benchmarks. 20+ videos covering Intel 14th gen, Arrow Lake, X3D chips, DDR4/DDR5 tuning, and more. Plus a second channel, Mateo Benchmarking, dedicated to raw game benchmark runs.</p>
-    <a class="btn" href="https://www.youtube.com/@MateoPcTech" target="_blank" rel="noopener noreferrer">Subscribe on YouTube</a>
-    <a class="btn grey" href="/youtube">Watch Videos</a>
-  </div>
-
-  <div class="card">
-    <h3>Roch Tools</h3>
-    <p>Free Windows tools from Roch Studio. Start with <strong>Roch Viewer</strong> (timings) and <strong>Roch CPU</strong> (Intel + AMD tuning), plus GPU, NVRAM, and Stress Test.</p>
-    <a class="btn" href="/roch-tools">Download tools</a>
-    <a class="btn grey" href="https://github.com/RochStudio" target="_blank">GitHub</a>
-  </div>
-
-  <div class="card">
-    <h3>Skool Community</h3>
-    <p>Tired of crashes and &quot;stable&quot; overclocks that fall apart mid-game? Get more FPS, cooler temps, and real stability — with step-by-step guides, weekly live calls, and daily support from Mateo. <strong>$20/month.</strong></p>
-    <a class="btn" href="https://www.skool.com/mateo-tech-5956/about" target="_blank">Join on Skool</a>
-    <a class="btn grey" href="/skool">Learn More</a>
-  </div>
-
-  <div class="card">
-    <h3>Discord</h3>
-    <p>Hang out with other PC builders, talk overclocking and benchmarks, and get help with your build.</p>
-    <a class="btn" href="/discord">Learn More</a>
-    <a class="btn grey" href="https://discord.gg/hPze8rTxqJ" target="_blank">Join the Discord</a>
-  </div>
-
-  <div class="card">
-    <h3>Recommended Parts</h3>
-    <p>The parts I recommend for building and overclocking.</p>
-    <a class="btn" href="/parts">See the List</a>
-  </div>
+  </section>
 </main>
 
-<footer>
-  <p>Mateo PC Tech &middot; <a href="https://www.youtube.com/@MateoPcTech" target="_blank">YouTube</a> &middot; <a href="https://www.youtube.com/@MateoBenchmarking" target="_blank">Benchmarking Channel</a> &middot; <a href="https://x.com/MateoPCTech" target="_blank">X (Twitter)</a> &middot; <a href="https://discord.gg/hPze8rTxqJ" target="_blank">Discord</a> &middot; <a href="https://github.com/RochStudio" target="_blank">GitHub</a> &middot; <a href="https://www.skool.com/mateo-tech-5956/about" target="_blank">Skool</a></p>
+<footer class="site-footer">
+  <p class="footer-tagline">Mateo PC Tech / Hardware. Tuning. Performance.</p>
+  <div class="footer-links">
+    <a href="https://www.youtube.com/@MateoPcTech" target="_blank">YouTube</a>
+    <a href="https://www.youtube.com/@MateoBenchmarking" target="_blank">Benchmarking Channel</a>
+    <a href="https://x.com/MateoPCTech" target="_blank">X (Twitter)</a>
+    <a href="https://discord.gg/hPze8rTxqJ" target="_blank">Discord</a>
+    <a href="https://github.com/RochStudio" target="_blank">GitHub</a>
+    <a href="https://www.skool.com/mateo-tech-5956/about" target="_blank">Skool</a>
+  </div>
 </footer>
 
 </body>

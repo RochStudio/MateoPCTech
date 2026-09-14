@@ -14,15 +14,16 @@
   <meta name="twitter:site" content="@MateoPCTech">
   <link rel="canonical" href="https://mateopctech.com/youtube">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script src="/theme.js"></script>
   <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body class="youtube">
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header>
-  <h1>Mateo <span>PC Tech</span></h1>
-  <nav>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Mateo PC Tech home">Mateo <span>PC Tech</span></a>
+  <nav aria-label="Main navigation">
     <a href="/">Home</a>
     <a href="/youtube" class="active" aria-current="page">YouTube</a>
     <a href="/roch-tools">Roch Tools</a>
@@ -30,16 +31,20 @@
     <a href="/discord">Discord</a>
     <a href="/parts">Parts</a>
   </nav>
+  <button class="theme-toggle" type="button" data-theme-toggle hidden>
+    <svg class="theme-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    <span data-theme-label>Light mode</span>
+  </button>
 </header>
 
-<main id="main">
-  <h2>Mateo PC Tech</h2>
+<main id="main" tabindex="-1">
+  <h1>Mateo PC Tech</h1>
   <p>
     Overclocking guides, BIOS tutorials, and benchmarks.
     <a href="https://www.youtube.com/@MateoPcTech" target="_blank">Subscribe to the channel</a> to catch new videos.
   </p>
 
-  <h3>Latest Videos</h3>
+  <h2>Latest Videos</h2>
   <!-- LATEST3:mateopctech:START -->
   <div class="video-grid">
 
@@ -67,7 +72,7 @@
   </div>
   <!-- LATEST3:mateopctech:END -->
 
-  <h3>Most Popular</h3>
+  <h2>Most Popular</h2>
   <!-- POPULAR3:mateopctech:START -->
   <div class="video-grid">
 
@@ -98,7 +103,7 @@
   </div>
   <!-- POPULAR3:mateopctech:END -->
 
-  <h2 style="margin-top: 40px;">Mateo Benchmarking</h2>
+  <h2 class="channel-title">Mateo Benchmarking</h2>
   <p>
     My second channel, dedicated to raw game benchmark runs.
     <a href="https://www.youtube.com/@MateoBenchmarking" target="_blank">Subscribe to Mateo Benchmarking</a> to catch new videos.
@@ -164,8 +169,16 @@
   <!-- POPULAR3:benchmarking:END -->
 </main>
 
-<footer>
-  <p>Mateo PC Tech &middot; <a href="https://www.youtube.com/@MateoPcTech" target="_blank">YouTube</a> &middot; <a href="https://www.youtube.com/@MateoBenchmarking" target="_blank">Benchmarking Channel</a> &middot; <a href="https://x.com/MateoPCTech" target="_blank">X (Twitter)</a> &middot; <a href="https://discord.gg/hPze8rTxqJ" target="_blank">Discord</a> &middot; <a href="https://github.com/RochStudio" target="_blank">GitHub</a> &middot; <a href="https://www.skool.com/mateo-tech-5956/about" target="_blank">Skool</a></p>
+<footer class="site-footer">
+  <p class="footer-tagline">Mateo PC Tech / Hardware. Tuning. Performance.</p>
+  <div class="footer-links">
+    <a href="https://www.youtube.com/@MateoPcTech" target="_blank">YouTube</a>
+    <a href="https://www.youtube.com/@MateoBenchmarking" target="_blank">Benchmarking Channel</a>
+    <a href="https://x.com/MateoPCTech" target="_blank">X (Twitter)</a>
+    <a href="https://discord.gg/hPze8rTxqJ" target="_blank">Discord</a>
+    <a href="https://github.com/RochStudio" target="_blank">GitHub</a>
+    <a href="https://www.skool.com/mateo-tech-5956/about" target="_blank">Skool</a>
+  </div>
 </footer>
 
 </body>

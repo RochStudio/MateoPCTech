@@ -1,0 +1,14 @@
+{
+  "name": "mateopctech-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:content": "python -m unittest discover -s tests -p test_*.py",
+    "preview": "python scripts/serve.py --port 4174"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0"
+  }
+}
