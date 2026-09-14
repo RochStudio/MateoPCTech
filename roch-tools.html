@@ -85,15 +85,16 @@
   </script>
   <link rel="canonical" href="https://mateopctech.com/roch-tools">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script src="/theme.js"></script>
   <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body class="roch-tools">
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header>
-  <h1>Mateo <span>PC Tech</span></h1>
-  <nav>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Mateo PC Tech home">Mateo <span>PC Tech</span></a>
+  <nav aria-label="Main navigation">
     <a href="/">Home</a>
     <a href="/youtube">YouTube</a>
     <a href="/roch-tools" class="active" aria-current="page">Roch Tools</a>
@@ -101,15 +102,20 @@
     <a href="/discord">Discord</a>
     <a href="/parts">Parts</a>
   </nav>
+  <button class="theme-toggle" type="button" data-theme-toggle hidden>
+    <svg class="theme-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    <span data-theme-label>Light mode</span>
+  </button>
 </header>
 
-<main id="main">
-  <h2>Roch Tools</h2>
+<main id="main" tabindex="-1">
+  <h1>Roch Tools</h1>
   <p>PC tools made by Roch Studio.</p>
 
+  <div class="catalog">
   <div class="card">
     <img class="tool-icon" src="/icons/roch-viewer.svg" width="64" height="64" alt="Roch Viewer">
-    <h3>Roch Viewer</h3>
+    <h2>Roch Viewer</h2>
     <p>
       Read-only memory-controller and timing viewer for Windows. Shows what the controller,
       modules, board and CPU actually report &mdash; timings, training results and live sensors.
@@ -127,13 +133,13 @@
 
   <div class="card">
     <img class="tool-icon" src="/icons/roch-cpu.svg" width="64" height="64" alt="Roch CPU">
-    <h3>Roch CPU</h3>
+    <h2>Roch CPU</h2>
     <p>
       Board-independent CPU and memory tuning for <strong>Intel LGA1700</strong> and
       <strong>AMD Ryzen</strong> (Zen 2 to Zen 5): ratios, voltages, power limits, Curve Optimizer,
       and per-DIMM DDR5 rails.
     </p>
-    <p><strong>Warning:</strong> bad values can crash or damage hardware. Changes do not survive a reboot.</p>
+    <p class="warning"><strong>Warning:</strong> bad values can crash or damage hardware. Changes do not survive a reboot.</p>
     <ul>
       <li><strong>Intel</strong> &mdash; ratios, OC mailbox voltages, PL1/PL2, DDR5 VDD/VDDQ/VPP</li>
       <li><strong>AMD</strong> &mdash; PPT/TDC/EDC, PBO scalar, Curve Optimizer, FMax, DDR5 rails</li>
@@ -146,12 +152,12 @@
 
   <div class="card">
     <img class="tool-icon" src="/icons/roch-gpu.svg" width="64" height="64" alt="Roch GPU">
-    <h3>Roch GPU</h3>
+    <h2>Roch GPU</h2>
     <p>
       Afterburner-style GPU tuning for NVIDIA and AMD from one executable: clocks, voltage,
       power limit, fan control, V/F curve, monitoring and profiles. No kernel driver.
     </p>
-    <p><strong>Warning:</strong> writing clocks and voltages can crash or damage hardware.</p>
+    <p class="warning"><strong>Warning:</strong> writing clocks and voltages can crash or damage hardware.</p>
     <ul>
       <li><strong>Controls</strong> &mdash; clocks, limits, voltage, fan curve, Extreme OC (off by default)</li>
       <li><strong>Also</strong> &mdash; live monitor, five profiles, built-in CLI</li>
@@ -164,7 +170,7 @@
 
   <div class="card">
     <img class="tool-icon" src="/icons/roch-nvram.svg" width="64" height="64" alt="Roch NVRAM">
-    <h3>Roch NVRAM</h3>
+    <h2>Roch NVRAM</h2>
     <p>
       AMI SCEWIN NVRAM editor for Windows. Queue setting changes, then write only after a
       backup, preflight checks and value-by-value verification.
@@ -182,12 +188,12 @@
 
   <div class="card">
     <img class="tool-icon" src="/icons/roch-stress-test.svg" width="64" height="64" alt="Roch Stress Test">
-    <h3>Roch Stress Test</h3>
+    <h2>Roch Stress Test</h2>
     <p>
       One window for Prime95, y-cruncher, TestMem5, RAM Test Pro, Linpack, OCCT, Cinebench,
       memtest_vulkan and 3DMark 11 &mdash; with presets, time limits and live failure detection.
     </p>
-    <p><strong>Warning:</strong> these tests push hardware hard. Watch temps; do not leave a first run unattended.</p>
+    <p class="warning"><strong>Warning:</strong> these tests push hardware hard. Watch temps; do not leave a first run unattended.</p>
     <ul>
       <li><strong>Quick Start</strong> &mdash; one test at a time from tool cards</li>
       <li><strong>Failure detection</strong> &mdash; watches logs/console; saves failed-run transcripts</li>
@@ -196,12 +202,21 @@
     <p>Free and open source.</p>
     <a class="btn grey" href="https://github.com/RochStudio/Roch-StressTest" target="_blank">View on GitHub</a>
   </div>
+  </div>
 
   <a class="btn" href="https://x.com/MateoPCTech" target="_blank">Follow for release news</a>
 </main>
 
-<footer>
-  <p>Mateo PC Tech &middot; <a href="https://www.youtube.com/@MateoPcTech" target="_blank">YouTube</a> &middot; <a href="https://www.youtube.com/@MateoBenchmarking" target="_blank">Benchmarking Channel</a> &middot; <a href="https://x.com/MateoPCTech" target="_blank">X (Twitter)</a> &middot; <a href="https://discord.gg/hPze8rTxqJ" target="_blank">Discord</a> &middot; <a href="https://github.com/RochStudio" target="_blank">GitHub</a> &middot; <a href="https://www.skool.com/mateo-tech-5956/about" target="_blank">Skool</a></p>
+<footer class="site-footer">
+  <p class="footer-tagline">Mateo PC Tech / Hardware. Tuning. Performance.</p>
+  <div class="footer-links">
+    <a href="https://www.youtube.com/@MateoPcTech" target="_blank">YouTube</a>
+    <a href="https://www.youtube.com/@MateoBenchmarking" target="_blank">Benchmarking Channel</a>
+    <a href="https://x.com/MateoPCTech" target="_blank">X (Twitter)</a>
+    <a href="https://discord.gg/hPze8rTxqJ" target="_blank">Discord</a>
+    <a href="https://github.com/RochStudio" target="_blank">GitHub</a>
+    <a href="https://www.skool.com/mateo-tech-5956/about" target="_blank">Skool</a>
+  </div>
 </footer>
 
 </body>

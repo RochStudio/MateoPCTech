@@ -6,15 +6,16 @@
   <title>Page Not Found - Mateo PC Tech</title>
   <meta name="robots" content="noindex">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script src="/theme.js"></script>
   <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body class="not-found">
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header>
-  <h1>Mateo <span>PC Tech</span></h1>
-  <nav>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Mateo PC Tech home">Mateo <span>PC Tech</span></a>
+  <nav aria-label="Main navigation">
     <a href="/">Home</a>
     <a href="/youtube">YouTube</a>
     <a href="/roch-tools">Roch Tools</a>
@@ -22,21 +23,33 @@
     <a href="/discord">Discord</a>
     <a href="/parts">Parts</a>
   </nav>
+  <button class="theme-toggle" type="button" data-theme-toggle hidden>
+    <svg class="theme-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    <span data-theme-label>Light mode</span>
+  </button>
 </header>
 
-<main id="main">
-  <h2>404 &mdash; Page Not Found</h2>
+<main id="main" tabindex="-1">
+  <h1>404 &mdash; Page Not Found</h1>
 
   <div class="card">
-    <h3>This page doesn't exist</h3>
+    <h2>This page doesn't exist</h2>
     <p>The link you followed is broken or the page has moved. Try one of the tabs above, or head back home.</p>
     <a class="btn" href="/">Back to Home</a>
     <a class="btn grey" href="/youtube">Watch Videos</a>
   </div>
 </main>
 
-<footer>
-  <p>Mateo PC Tech &middot; <a href="https://www.youtube.com/@MateoPcTech" target="_blank">YouTube</a> &middot; <a href="https://www.youtube.com/@MateoBenchmarking" target="_blank">Benchmarking Channel</a> &middot; <a href="https://x.com/MateoPCTech" target="_blank">X (Twitter)</a> &middot; <a href="https://discord.gg/hPze8rTxqJ" target="_blank">Discord</a> &middot; <a href="https://github.com/RochStudio" target="_blank">GitHub</a> &middot; <a href="https://www.skool.com/mateo-tech-5956/about" target="_blank">Skool</a></p>
+<footer class="site-footer">
+  <p class="footer-tagline">Mateo PC Tech / Hardware. Tuning. Performance.</p>
+  <div class="footer-links">
+    <a href="https://www.youtube.com/@MateoPcTech" target="_blank">YouTube</a>
+    <a href="https://www.youtube.com/@MateoBenchmarking" target="_blank">Benchmarking Channel</a>
+    <a href="https://x.com/MateoPCTech" target="_blank">X (Twitter)</a>
+    <a href="https://discord.gg/hPze8rTxqJ" target="_blank">Discord</a>
+    <a href="https://github.com/RochStudio" target="_blank">GitHub</a>
+    <a href="https://www.skool.com/mateo-tech-5956/about" target="_blank">Skool</a>
+  </div>
 </footer>
 
 </body>
