@@ -112,12 +112,17 @@ main > h3 { margin: 30px 0 20px; }
 .hero h1 { font-size: clamp(44px, 5.2vw, 70px); line-height: 1.05; letter-spacing: -.05em; font-weight: 750; margin-bottom: 26px; }
 .hero h1 span { color: var(--accent); }
 .hero-copy > p:not(.eyebrow) { font-size: 17px; line-height: 1.8; }
-.hardware-art { height: 330px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border: 1px solid var(--border); border-radius: 18px; background: repeating-linear-gradient(0deg, transparent, transparent 31px, var(--grid) 32px), repeating-linear-gradient(90deg, transparent, transparent 31px, var(--grid) 32px), var(--surface); }
-.chip { position: relative; z-index: 1; border: 1px solid var(--accent); padding: 34px 37px; background: var(--bg); box-shadow: 0 0 0 10px var(--surface), 0 0 0 11px var(--border), 0 0 0 32px var(--surface), 0 0 0 33px var(--border); font-size: 34px; line-height: 1.15; font-weight: 700; letter-spacing: -1px; }
-.chip span { display: block; font: 10px Consolas, monospace; letter-spacing: 2px; color: var(--accent); margin-bottom: 12px; }
-.art-top { position: absolute; inset: 18px 20px auto; font: 10px/1.5 Consolas, monospace; letter-spacing: 1.5px; color: var(--muted); }
-.art-bottom { position: absolute; inset: auto 20px 18px; display: flex; justify-content: space-between; gap: 10px; font: 10px/1.5 Consolas, monospace; color: var(--muted); }
-.art-line { position: absolute; width: 150%; height: 1px; background: var(--accent); opacity: .3; transform: rotate(-30deg); }
+.hero-toolkit { min-width: 0; padding: 30px; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); }
+.hero-toolkit > .eyebrow { margin-bottom: 10px; }
+.hero-toolkit h2 { font-size: clamp(28px, 3vw, 36px); margin-bottom: 24px; }
+.toolkit-links { display: grid; }
+.toolkit-links a { display: grid; grid-template-columns: 24px minmax(0, 1fr) 20px; gap: 16px; align-items: center; min-height: 82px; padding: 17px 0; border-top: 1px solid var(--border); text-decoration: none; }
+.toolkit-number { font: 11px Consolas, monospace; color: var(--muted); }
+.toolkit-copy { min-width: 0; }
+.toolkit-copy strong { display: block; font-size: 17px; line-height: 1.4; }
+.toolkit-copy > span { display: block; margin-top: 5px; font-size: 13px; line-height: 1.5; color: var(--muted); }
+.toolkit-arrow { font-size: 20px; color: var(--accent); }
+.toolkit-links a:hover strong { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
 .section-title { display: flex; align-items: center; gap: 16px; justify-content: space-between; margin-bottom: 23px; }
 .section-title h2 { font-size: 31px; }
 .section-title > span { font: 11px/1.5 Consolas, monospace; letter-spacing: 1px; color: var(--muted); }
@@ -198,10 +203,8 @@ main > h3 { margin: 30px 0 20px; }
   .hero { grid-template-columns: minmax(0, 1fr); gap: 28px; padding: 8px 0 32px; margin-bottom: 30px; }
   .hero h1 { font-size: clamp(40px, 9vw, 60px); }
   .hero-copy > p:not(.eyebrow) { font-size: 16px; }
-  .hardware-art { height: 265px; }
-  .chip { padding: 24px 30px; font-size: 28px; }
-  .art-top { font-size: 9px; letter-spacing: 1px; }
-  .art-bottom { font-size: 9px; }
+  .hero-toolkit { padding: 24px; }
+  .toolkit-links a { gap: 12px; }
   .video-grid, .home .latest .video-grid, .home-cards, .catalog, .parts-grid, .community-card, .board-groups, .x-posts { grid-template-columns: minmax(0, 1fr); }
   .video-grid, .home-cards, .catalog, .parts-grid { gap: 18px; }
   .card, .community-card { padding: 24px; }
@@ -231,7 +234,7 @@ main > h3 { margin: 30px 0 20px; }
   .btn, .theme-toggle { transition: background-color 140ms ease, border-color 140ms ease; }
 }
 @media print {
-  .theme-toggle, .hardware-art { display: none; }
+  .theme-toggle { display: none; }
   body { background: white; color: black; font-size: 12pt; }
   .card, .video { break-inside: avoid; }
 }
